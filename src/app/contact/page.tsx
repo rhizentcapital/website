@@ -10,7 +10,7 @@ export default function Contact() {
       <p className="text-xs font-semibold tracking-[0.25em] text-rhizent-gold">
         CONTACT
       </p>
-      <h1 className="font-serif text-2xl text-rhizent-cream sm:text-3xl">
+      <h1 className="font-title text-2xl text-rhizent-cream sm:text-3xl">
         Let&apos;s talk.
       </h1>
       <a

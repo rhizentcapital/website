@@ -14,12 +14,12 @@
   --color-rhizent-gold: var(--color-gold);
   --color-rhizent-cream: var(--color-cream);
   --color-rhizent-ink: var(--color-ink);
-  --font-serif: var(--font-serif);
-  --font-sans: var(--font-sans);
+  --font-title: var(--font-title);
+  --font-body: var(--font-body);
 }
 
 body {
   background: var(--color-cream);
   color: var(--color-ink);
-  font-family: var(--font-sans);
+  font-family: var(--font-body);
 }

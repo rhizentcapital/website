@@ -11,7 +11,7 @@ export default function About() {
         <p className="text-xs font-semibold tracking-[0.25em] text-rhizent-gold">
           ABOUT
         </p>
-        <h1 className="font-serif text-2xl leading-snug text-rhizent-green sm:text-3xl">
+        <h1 className="font-title text-2xl leading-snug text-rhizent-green sm:text-3xl">
           A holding company built to compound, not to exit.
         </h1>
         <p className="text-base leading-relaxed text-rhizent-ink/80 sm:text-lg">

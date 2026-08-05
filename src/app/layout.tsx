@@ -1,16 +1,17 @@
 import type { Metadata } from "next";
-import { Playfair_Display, Inter } from "next/font/google";
+import { Cinzel, Noto_Serif } from "next/font/google";
 import { Nav } from "@/components/Nav";
 import "./globals.css";
 
-const playfair = Playfair_Display({
-  variable: "--font-serif",
+const cinzel = Cinzel({
+  variable: "--font-title",
   subsets: ["latin"],
 });
 
-const inter = Inter({
-  variable: "--font-sans",
+const notoSerif = Noto_Serif({
+  variable: "--font-body",
   subsets: ["latin"],
+  weight: ["400", "700"],
 });
 
 export const metadata: Metadata = {
@@ -26,7 +27,7 @@ export default function RootLayout({
   return (
     <html
       lang="ja"
-      className={`${playfair.variable} ${inter.variable} h-full antialiased`}
+      className={`${cinzel.variable} ${notoSerif.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col">
         <Nav />
