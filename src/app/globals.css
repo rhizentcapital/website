@@ -1,25 +1,71 @@
 @import "tailwindcss";
 
+/* Brand Guide palette */
 :root {
-  --color-green: #0b2f1a;
-  --color-green-deep: #082212;
-  --color-gold: #c9a35f;
-  --color-cream: #f4efe4;
-  --color-ink: #1c231d;
+  --color-gold: #c8a263;
+  --color-forest: #0b1816;
+  --color-moss: #1e2f28;
+  --color-stone: #5a6158;
+  --color-ivory: #f5f2e9;
 }
 
 @theme inline {
-  --color-rhizent-green: var(--color-green);
-  --color-rhizent-green-deep: var(--color-green-deep);
-  --color-rhizent-gold: var(--color-gold);
-  --color-rhizent-cream: var(--color-cream);
-  --color-rhizent-ink: var(--color-ink);
-  --font-title: var(--font-title);
-  --font-body: var(--font-body);
+  --color-gold: var(--color-gold);
+  --color-forest: var(--color-forest);
+  --color-moss: var(--color-moss);
+  --color-stone: var(--color-stone);
+  --color-ivory: var(--color-ivory);
+  --font-serif: var(--font-cinzel), serif;
+  --font-sans: var(--font-noto-sans), system-ui, sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 4rem;
+  background: var(--color-forest);
 }
 
 body {
-  background: var(--color-cream);
-  color: var(--color-ink);
-  font-family: var(--font-body);
+  background: var(--color-forest);
+  color: var(--color-ivory);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+}
+
+::selection {
+  background: var(--color-gold);
+  color: var(--color-forest);
+}
+
+:focus-visible {
+  outline: 1px solid var(--color-gold);
+  outline-offset: 4px;
+}
+
+/* Motion: fade in only. Nothing moves on scroll. */
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.fade-in {
+  animation: fade-in 1.2s ease-out both;
+}
+
+.fade-in-slow {
+  animation: fade-in 2.6s ease-out 0.3s both;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  .fade-in,
+  .fade-in-slow {
+    animation: none;
+  }
 }
